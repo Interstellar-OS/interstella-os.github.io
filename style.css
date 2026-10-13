@@ -492,3 +492,69 @@ a.card {
   box-shadow: 0 6px 18px rgba(52, 224, 196, 0.15);
   color: var(--teal);
 }
+
+/* Readable type and a layout tuned for phones and small tablets. */
+body{ font-size:17px; }
+.eyebrow{ font-size:14px; letter-spacing:.18em; }
+.nav-links{ font-size:15px; }
+.section-head p{ font-size:17px; line-height:1.65; }
+.card h3{ font-size:22px; }
+.card .tag{ font-size:13px; }
+.card p{ font-size:17px; line-height:1.72; }
+.card .stars{ font-size:14px; }
+.author-card label{ font-size:14px; line-height:1.65; }
+.author-sub{ font-size:16px; }
+footer{ font-size:14px; line-height:1.65; }
+
+.card-icon{ width:100%; height:auto; aspect-ratio: 2.5 / 1; }
+.card-avatar{ transform:none; }
+
+@media(max-width:720px){
+  nav{
+    padding:12px 16px 10px;
+    flex-wrap:wrap;
+    row-gap:10px;
+    background:linear-gradient(to bottom, rgba(5,5,9,.94), rgba(5,5,9,.72));
+  }
+  html.light nav{ background:linear-gradient(to bottom, rgba(246,245,251,.96), rgba(246,245,251,.78)); }
+  .logo{ font-size:18px; gap:9px; }
+  .logo-dot{ width:10px; height:10px; }
+  .theme-toggle{ width:42px; height:42px; }
+  .nav-links{
+    display:flex;
+    order:3;
+    flex:1 0 100%;
+    justify-content:center;
+    gap:8px;
+  }
+  .nav-pill{ padding:9px 13px; gap:7px; }
+  .nav-pill svg{ width:16px; height:16px; }
+  .hero{ min-height:100svh; padding:118px 20px 100px; }
+  .hero h1{ font-size:clamp(40px, 10vw, 64px); line-height:1.08; }
+  .hero p{ margin-top:20px; font-size:19px; line-height:1.65; }
+  .hero-cta{ margin-top:28px; gap:12px; width:100%; }
+  .btn{ font-size:14px; padding:14px 18px; }
+  .scroll-cue{ bottom:24px; font-size:13px; }
+  .section-head{ padding:34px 20px 8px; }
+  .section-head h2{ font-size:clamp(28px, 7vw, 38px); }
+  .constellation{ margin:34px auto 24px; padding:0 16px; }
+  .spine{ left:9px; }
+  .row{ padding:18px 0 18px 25px; }
+  .row .node{ left:9px; width:11px; height:11px; }
+  .row.left .card,.row.right .card{ padding:20px 18px; border-radius:14px; }
+  .card-icon{ margin-bottom:16px; }
+  .card p{ font-size:18px; }
+  .author-section{ margin:64px auto 36px; padding:0 16px; }
+  .author-card{ padding:32px 20px; border-radius:18px; }
+  .author-input{ font-size:22px; }
+  .social-links{ gap:10px; flex-wrap:wrap; }
+  .social-btn{ min-height:46px; padding:11px 16px; font-size:15px; }
+  footer{ padding:30px 18px 42px; }
+}
+
+@media(max-width:380px){
+  .nav-pill{ padding:8px 10px; }
+  .nav-pill span{ font-size:14px; }
+  .hero-cta{ flex-direction:column; align-items:stretch; max-width:280px; }
+  .social-btn{ flex:1 1 100%; justify-content:center; }
+}
